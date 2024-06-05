@@ -31,6 +31,6 @@ public class PrelevementServiceImpl implements PrelevementService {
 
     @Override
     public List<Prelevement> getListOfPrelevementsbyPeriod(LocalDate StartDate, LocalDate EndDate) {
-        prelevementRepository.
+        return null;
     }
 }

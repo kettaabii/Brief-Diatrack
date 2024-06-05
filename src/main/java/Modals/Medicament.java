@@ -15,9 +15,9 @@ public class Medicament {
     public Medicament(int idMedicament, String libelle_Medicament, String type_Medicament, String range, String dose) {
         this.idMedicament = idMedicament;
         this.libelle_Medicament = libelle_Medicament;
-        Type_Medicament = type_Medicament;
-        Range = range;
-        Dose = dose;
+        this.Type_Medicament = type_Medicament;
+        this.Range = range;
+        this.Dose = dose;
     }
 
     public Medicament() {

@@ -25,7 +25,7 @@ import java.util.Properties;
 @EnableTransactionManagement
 @PropertySource({"classpath:application.properties"})
 @ComponentScan({"com"})
-@EnableJpaRepositories(basePackages = "com.repository")
+@EnableJpaRepositories(basePackages = "Repository")
 public class PersistenceJPAConfig {
 
     @Autowired
@@ -35,7 +35,7 @@ public class PersistenceJPAConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         final LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setDataSource(dataSource());
-        entityManagerFactoryBean.setPackagesToScan("com.modals");
+        entityManagerFactoryBean.setPackagesToScan("Modals");
 
         final HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         entityManagerFactoryBean.setJpaVendorAdapter(vendorAdapter);
