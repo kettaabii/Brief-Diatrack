@@ -1,6 +1,6 @@
-package Repository;
+package com.config.Repository;
 
-import Modals.Aliments;
+import com.config.Modals.Aliments;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

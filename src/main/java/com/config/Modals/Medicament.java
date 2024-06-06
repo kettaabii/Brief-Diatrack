@@ -1,4 +1,4 @@
-package Modals;
+package com.config.Modals;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

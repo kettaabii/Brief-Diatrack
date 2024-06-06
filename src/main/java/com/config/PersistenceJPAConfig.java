@@ -1,9 +1,8 @@
-package config;
+package com.config;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
@@ -24,8 +23,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @PropertySource({"classpath:application.properties"})
-@ComponentScan({"com"})
-@EnableJpaRepositories(basePackages = "Repository")
+@EnableJpaRepositories(basePackages = "com.config.Repository")
 public class PersistenceJPAConfig {
 
     @Autowired
@@ -35,7 +33,7 @@ public class PersistenceJPAConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         final LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setDataSource(dataSource());
-        entityManagerFactoryBean.setPackagesToScan("Modals");
+        entityManagerFactoryBean.setPackagesToScan("com.config.Modals");
 
         final HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         entityManagerFactoryBean.setJpaVendorAdapter(vendorAdapter);

@@ -1,6 +1,6 @@
-package Repository;
+package com.config.Repository;
 
-import Modals.Prelevement;
+import com.config.Modals.Prelevement;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
