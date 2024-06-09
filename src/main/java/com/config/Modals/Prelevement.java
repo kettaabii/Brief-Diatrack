@@ -1,7 +1,11 @@
 package com.config.Modals;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import java.sql.Date;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 @Entity
@@ -13,11 +17,13 @@ public class Prelevement {
 
     private double niveauGlicemique;
 
-    private LocalDate datePrelevement;
 
+    private LocalDateTime datePrelevement;
+
+    @Enumerated(EnumType.STRING)
     private RangeGlicemie range;
 
-    public Prelevement(double niveauGlicemique, LocalDate datePrelevement, RangeGlicemie range) {
+    public Prelevement(double niveauGlicemique, LocalDateTime datePrelevement, RangeGlicemie range) {
         this.niveauGlicemique = niveauGlicemique;
         this.datePrelevement = datePrelevement;
         this.range = range;
@@ -40,11 +46,11 @@ public class Prelevement {
         this.niveauGlicemique = niveauGlicemique;
     }
 
-    public LocalDate getDatePrelevement() {
+    public LocalDateTime getDatePrelevement() {
         return datePrelevement;
     }
 
-    public void setDatePrelevement(LocalDate datePrelevement) {
+    public void setDatePrelevement(LocalDateTime datePrelevement) {
         this.datePrelevement = datePrelevement;
     }
 
@@ -54,5 +60,11 @@ public class Prelevement {
 
     public void setRange(RangeGlicemie range) {
         this.range = range;
+    }
+    public enum RangeGlicemie {
+        NORMAL,
+        PREDIABETIC,
+        DIABETIC,
+
     }
 }

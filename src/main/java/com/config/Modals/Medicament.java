@@ -10,14 +10,17 @@ public class Medicament {
     private String libelle_Medicament;
     private String Type_Medicament;
     private String Range;
-    private String Dose;
+    private int DoseJournaliere;
+    private int DosesPrise;
 
-    public Medicament(int idMedicament, String libelle_Medicament, String type_Medicament, String range, String dose) {
+
+    public Medicament(int idMedicament, String libelle_Medicament, String type_Medicament, String range, int doseJournaliere, int dosesPrise) {
         this.idMedicament = idMedicament;
         this.libelle_Medicament = libelle_Medicament;
-        this.Type_Medicament = type_Medicament;
-        this.Range = range;
-        this.Dose = dose;
+        Type_Medicament = type_Medicament;
+        Range = range;
+        DoseJournaliere = doseJournaliere;
+        DosesPrise = dosesPrise;
     }
 
     public Medicament() {
@@ -55,11 +58,31 @@ public class Medicament {
         Range = range;
     }
 
-    public String getDose() {
-        return Dose;
+    public int getDoseJournaliere() {
+        return DoseJournaliere;
     }
 
-    public void setDose(String dose) {
-        Dose = dose;
+    public void setDoseJournaliere(int doseJournaliere) {
+        DoseJournaliere = doseJournaliere;
+    }
+
+    public int getDosesPrise() {
+        return DosesPrise;
+    }
+
+    public void setDosesPrise(int dosesPrise) {
+        DosesPrise = dosesPrise;
+    }
+
+    @Override
+    public String toString() {
+        return "Medicament{" +
+                "idMedicament=" + idMedicament +
+                ", libelle_Medicament='" + libelle_Medicament + '\'' +
+                ", Type_Medicament='" + Type_Medicament + '\'' +
+                ", Range='" + Range + '\'' +
+                ", DoseJournaliere=" + DoseJournaliere +
+                ", DosesPrise=" + DosesPrise +
+                '}';
     }
 }

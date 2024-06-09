@@ -16,7 +16,7 @@ public class PrelevementService {
     private PrelevementRepository prelevementRepository;
 
 
-    public Prelevement addPrelevement(Prelevement prelevement) {
+    public Prelevement  addPrelevement(Prelevement prelevement) {
 
         prelevementRepository.save(prelevement);
         return prelevement;
@@ -28,12 +28,9 @@ public class PrelevementService {
     }
 
 
-    public void deletePrelevement(int prelevementId) {
-      prelevementRepository.deleteById(prelevementId);
-    }
 
 
-    public List<Prelevement> getListOfPrelevementsbyPeriod(LocalDate StartDate, LocalDate EndDate) {
+    public List<Prelevement> getListOfPrelevementsbyweek(LocalDate StartDate, LocalDate EndDate) {
         return null;
     }
 }
